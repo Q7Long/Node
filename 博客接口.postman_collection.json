@@ -1,0 +1,956 @@
+{
+	"info": {
+		"_postman_id": "45362574-5be3-4be5-99af-d8122fabaf4a",
+		"name": "博客接口",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "23416117"
+	},
+	"item": [
+		{
+			"name": "01-管理员注册",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nickname",
+							"value": "1234",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456abc",
+							"type": "text"
+						},
+						{
+							"key": "password2",
+							"value": "123456abc",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:3000/admin/register"
+			},
+			"response": []
+		},
+		{
+			"name": "02-管理员登录",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nickname",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456abc",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:3000/admin/login"
+			},
+			"response": []
+		},
+		{
+			"name": "03-获取用户信息",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjMyOTYyMjE4NGU2YjE1OTc0Njk0MmM1IiwiZXhwIjoxNjYzNzQ4MzU5LCJpYXQiOjE2NjM2NjE5NzJ9.Y7jNgKhrG1dRIGDzINzrMNBJWjjTn93ksduOSr8Dz54"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nickname",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456abc",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:3000/admin/user/info"
+			},
+			"response": []
+		},
+		{
+			"name": "04-创建分类",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjMyOTYyMjE4NGU2YjE1OTc0Njk0MmM1IiwiZXhwIjoxNjYzNzQ4MzU5LCJpYXQiOjE2NjM2NjE5NzJ9.Y7jNgKhrG1dRIGDzINzrMNBJWjjTn93ksduOSr8Dz54"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "前端开发",
+							"type": "text"
+						},
+						{
+							"key": "keyword",
+							"value": "vue2 vue3",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:3000/category"
+			},
+			"response": []
+		},
+		{
+			"name": "05-获取所有分类",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjMyOTYyMjE4NGU2YjE1OTc0Njk0MmM1IiwiZXhwIjoxNjYzNzQ4MzU5LCJpYXQiOjE2NjM2NjE5NzJ9.Y7jNgKhrG1dRIGDzINzrMNBJWjjTn93ksduOSr8Dz54"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": "localhost:3000/category"
+			},
+			"response": []
+		},
+		{
+			"name": "06-更新分类",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjMyOTYyMjE4NGU2YjE1OTc0Njk0MmM1IiwiZXhwIjoxNjYzNzQ4MzU5LCJpYXQiOjE2NjM2NjE5NzJ9.Y7jNgKhrG1dRIGDzINzrMNBJWjjTn93ksduOSr8Dz54"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "前端开发",
+							"type": "text"
+						},
+						{
+							"key": "keyword",
+							"value": "vue2 vue4",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:3000/category/63298047d6ec05224477aada"
+			},
+			"response": []
+		},
+		{
+			"name": "07-删除分类",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjMyOTYyMjE4NGU2YjE1OTc0Njk0MmM1IiwiZXhwIjoxNjYzNzQ4MzU5LCJpYXQiOjE2NjM2NjE5NzJ9.Y7jNgKhrG1dRIGDzINzrMNBJWjjTn93ksduOSr8Dz54"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "前端开发",
+							"type": "text"
+						},
+						{
+							"key": "keyword",
+							"value": "vue2 vue4",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:3000/category/63298047d6ec05224477aada"
+			},
+			"response": []
+		},
+		{
+			"name": "08-创建文章",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjMyOTYyMjE4NGU2YjE1OTc0Njk0MmM1IiwiZXhwIjoxNjYzODQ0OTU4LCJpYXQiOjE2NjM3NTg3NTd9.-A0qXVWVpmGQKLu96uCfxl0_OFyjBx1hmcvTJi3FLtM"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "标题",
+							"type": "text"
+						},
+						{
+							"key": "author",
+							"value": "作者",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "描述",
+							"type": "text"
+						},
+						{
+							"key": "keyword",
+							"value": "关键词",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "内容",
+							"type": "text"
+						},
+						{
+							"key": "cover",
+							"value": "封面",
+							"type": "text"
+						},
+						{
+							"key": "browse",
+							"value": "110",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "632999f7c8ffc65f6c74d93e",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:3000/article"
+			},
+			"response": []
+		},
+		{
+			"name": "09-获取文章",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjMyOTYyMjE4NGU2YjE1OTc0Njk0MmM1IiwiZXhwIjoxNjYzNzQ4MzU5LCJpYXQiOjE2NjM2NjE5NzJ9.Y7jNgKhrG1dRIGDzINzrMNBJWjjTn93ksduOSr8Dz54"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "标题",
+							"type": "text"
+						},
+						{
+							"key": "author",
+							"value": "作者",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "描述",
+							"type": "text"
+						},
+						{
+							"key": "keyword",
+							"value": "关键词",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "内容",
+							"type": "text"
+						},
+						{
+							"key": "cover",
+							"value": "封面",
+							"type": "text"
+						},
+						{
+							"key": "browse",
+							"value": "110",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "632999f7c8ffc65f6c74d93e",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/article?keyword=关",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"article"
+					],
+					"query": [
+						{
+							"key": "category_id",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "pageIndex",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "paegSize",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "keyword",
+							"value": "关"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "10-更新文章",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjMyOTYyMjE4NGU2YjE1OTc0Njk0MmM1IiwiZXhwIjoxNjYzNzQ4MzU5LCJpYXQiOjE2NjM2NjE5NzJ9.Y7jNgKhrG1dRIGDzINzrMNBJWjjTn93ksduOSr8Dz54"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "标题1",
+							"type": "text"
+						},
+						{
+							"key": "author",
+							"value": "作者1",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "描述1",
+							"type": "text"
+						},
+						{
+							"key": "keyword",
+							"value": "关键词1",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "内容1",
+							"type": "text"
+						},
+						{
+							"key": "cover",
+							"value": "封面1",
+							"type": "text"
+						},
+						{
+							"key": "browse",
+							"value": "1101",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": "localhost:3000/article/63299a35c8ffc65f6c74d943"
+			},
+			"response": []
+		},
+		{
+			"name": "11-获取文章详情",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjMyOTYyMjE4NGU2YjE1OTc0Njk0MmM1IiwiZXhwIjoxNjYzNzQ4MzU5LCJpYXQiOjE2NjM2NjE5NzJ9.Y7jNgKhrG1dRIGDzINzrMNBJWjjTn93ksduOSr8Dz54"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "标题1",
+							"type": "text"
+						},
+						{
+							"key": "author",
+							"value": "作者1",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "描述1",
+							"type": "text"
+						},
+						{
+							"key": "keyword",
+							"value": "关键词1",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "内容1",
+							"type": "text"
+						},
+						{
+							"key": "cover",
+							"value": "封面1",
+							"type": "text"
+						},
+						{
+							"key": "browse",
+							"value": "1101",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": "localhost:3000/article/63299a35c8ffc65f6c74d943"
+			},
+			"response": []
+		},
+		{
+			"name": "12-删除文章",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjMyOTYyMjE4NGU2YjE1OTc0Njk0MmM1IiwiZXhwIjoxNjYzNzQ4MzU5LCJpYXQiOjE2NjM2NjE5NzJ9.Y7jNgKhrG1dRIGDzINzrMNBJWjjTn93ksduOSr8Dz54"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": "localhost:3000/article/63299a35c8ffc65f6c74d943"
+			},
+			"response": []
+		},
+		{
+			"name": "13-上传文件封面",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjMyOTYyMjE4NGU2YjE1OTc0Njk0MmM1IiwiZXhwIjoxNjYzNzQ4MzU5LCJpYXQiOjE2NjM2NjE5NzJ9.Y7jNgKhrG1dRIGDzINzrMNBJWjjTn93ksduOSr8Dz54"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/C:/Users/admin/Desktop/码路严选/myapp/src/assets/logo.png"
+						}
+					]
+				},
+				"url": "localhost:3000/upload"
+			},
+			"response": []
+		},
+		{
+			"name": "14-新增评论",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjMyOTYyMjE4NGU2YjE1OTc0Njk0MmM1IiwiZXhwIjoxNjYzNzQ4MzU5LCJpYXQiOjE2NjM2NjE5NzJ9.Y7jNgKhrG1dRIGDzINzrMNBJWjjTn93ksduOSr8Dz54"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nickname",
+							"value": "码路",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "非常棒",
+							"type": "text"
+						},
+						{
+							"key": "target_id",
+							"value": "632af1b33ce0e530a043ad2e",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:3000/comment"
+			},
+			"response": []
+		},
+		{
+			"name": "15-获取所有的评论列表",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjMyOTYyMjE4NGU2YjE1OTc0Njk0MmM1IiwiZXhwIjoxNjYzNzQ4MzU5LCJpYXQiOjE2NjM2NjE5NzJ9.Y7jNgKhrG1dRIGDzINzrMNBJWjjTn93ksduOSr8Dz54"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:3000/comment?pageIndex=1&pageSize=5",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"comment"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "16-获取评论详情",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjMyOTYyMjE4NGU2YjE1OTc0Njk0MmM1IiwiZXhwIjoxNjYzNzQ4MzU5LCJpYXQiOjE2NjM2NjE5NzJ9.Y7jNgKhrG1dRIGDzINzrMNBJWjjTn93ksduOSr8Dz54"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": "localhost:3000/comment/632af1c93ce0e530a043ad30"
+			},
+			"response": []
+		},
+		{
+			"name": "17-更新评论",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjMyOTYyMjE4NGU2YjE1OTc0Njk0MmM1IiwiZXhwIjoxNjYzODQ2MDQ1LCJpYXQiOjE2NjM3NTk3Nzd9.zqa6rczmd6hUHuj4giCHVSBB6QHl4LSQxB_CLbhar7w"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nickname",
+							"value": "码路",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "非常棒666",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:3000/comment/632af1c93ce0e530a043ad30"
+			},
+			"response": []
+		},
+		{
+			"name": "18-删除评论",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjMyOTYyMjE4NGU2YjE1OTc0Njk0MmM1IiwiZXhwIjoxNjYzODQ2MDQ1LCJpYXQiOjE2NjM3NTk3Nzd9.zqa6rczmd6hUHuj4giCHVSBB6QHl4LSQxB_CLbhar7w"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": "localhost:3000/comment/632af1c93ce0e530a043ad30"
+			},
+			"response": []
+		},
+		{
+			"name": "19-新增回复",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjMyOTYyMjE4NGU2YjE1OTc0Njk0MmM1IiwiZXhwIjoxNjYzNzQ4MzU5LCJpYXQiOjE2NjM2NjE5NzJ9.Y7jNgKhrG1dRIGDzINzrMNBJWjjTn93ksduOSr8Dz54"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nickname",
+							"value": "小码路",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "非常棒888",
+							"type": "text"
+						},
+						{
+							"key": "comment_id",
+							"value": "632af8f04cfa2c0f20b145c4",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:3000/reply"
+			},
+			"response": []
+		},
+		{
+			"name": "20-获取所有回复列表",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjMyOTYyMjE4NGU2YjE1OTc0Njk0MmM1IiwiZXhwIjoxNjYzNzQ4MzU5LCJpYXQiOjE2NjM2NjE5NzJ9.Y7jNgKhrG1dRIGDzINzrMNBJWjjTn93ksduOSr8Dz54"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:3000/reply?comment_id=632af8f04cfa2c0f20b145c4",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reply"
+					],
+					"query": [
+						{
+							"key": "comment_id",
+							"value": "632af8f04cfa2c0f20b145c4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "21-获取某条的回复详情",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjMyOTYyMjE4NGU2YjE1OTc0Njk0MmM1IiwiZXhwIjoxNjYzNzQ4MzU5LCJpYXQiOjE2NjM2NjE5NzJ9.Y7jNgKhrG1dRIGDzINzrMNBJWjjTn93ksduOSr8Dz54"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": "localhost:3000/reply/632af8f94cfa2c0f20b145c7"
+			},
+			"response": []
+		},
+		{
+			"name": "22-更新单条回复",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjMyOTYyMjE4NGU2YjE1OTc0Njk0MmM1IiwiZXhwIjoxNjYzODQ2MDQ1LCJpYXQiOjE2NjM3NTk3Nzd9.zqa6rczmd6hUHuj4giCHVSBB6QHl4LSQxB_CLbhar7w"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nickname",
+							"value": "码路",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "非常棒666888",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:3000/reply/632af8f94cfa2c0f20b145c7"
+			},
+			"response": []
+		},
+		{
+			"name": "23-删除某条回复",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjMyOTYyMjE4NGU2YjE1OTc0Njk0MmM1IiwiZXhwIjoxNjYzODQ2MDQ1LCJpYXQiOjE2NjM3NTk3Nzd9.zqa6rczmd6hUHuj4giCHVSBB6QHl4LSQxB_CLbhar7w"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": "localhost:3000/reply/632af8f94cfa2c0f20b145c7"
+			},
+			"response": []
+		},
+		{
+			"name": "24-新增广告",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjMyOTYyMjE4NGU2YjE1OTc0Njk0MmM1IiwiZXhwIjoxNjYzODQ4NzQzLCJpYXQiOjE2NjM3NjI0OTJ9.Yn02KTb2_aRfUhhrpMvtdHC5QtgvVf5lZFIDDteVMtk"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "码路教育",
+							"type": "text"
+						},
+						{
+							"key": "link",
+							"value": "www.malujiaoyu.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:3000/advertise"
+			},
+			"response": []
+		},
+		{
+			"name": "25-获取所有广告列表",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjMyOTYyMjE4NGU2YjE1OTc0Njk0MmM1IiwiZXhwIjoxNjYzODQ4NzQzLCJpYXQiOjE2NjM3NjI0OTJ9.Yn02KTb2_aRfUhhrpMvtdHC5QtgvVf5lZFIDDteVMtk"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": "localhost:3000/advertise"
+			},
+			"response": []
+		},
+		{
+			"name": "26-获取广告详情",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjMyOTYyMjE4NGU2YjE1OTc0Njk0MmM1IiwiZXhwIjoxNjYzODQ4NzQzLCJpYXQiOjE2NjM3NjI0OTJ9.Yn02KTb2_aRfUhhrpMvtdHC5QtgvVf5lZFIDDteVMtk"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": "localhost:3000/advertise/632b00460d2c5e5fc039479e"
+			},
+			"response": []
+		},
+		{
+			"name": "27-更新广告",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjMyOTYyMjE4NGU2YjE1OTc0Njk0MmM1IiwiZXhwIjoxNjYzODQ4NzQzLCJpYXQiOjE2NjM3NjI0OTJ9.Yn02KTb2_aRfUhhrpMvtdHC5QtgvVf5lZFIDDteVMtk"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "码路教育666",
+							"type": "text"
+						},
+						{
+							"key": "link",
+							"value": "www.malujiaoyu.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:3000/advertise/632b00460d2c5e5fc039479e"
+			},
+			"response": []
+		},
+		{
+			"name": "28-删除广告",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjMyOTYyMjE4NGU2YjE1OTc0Njk0MmM1IiwiZXhwIjoxNjYzODQ4NzQzLCJpYXQiOjE2NjM3NjI0OTJ9.Yn02KTb2_aRfUhhrpMvtdHC5QtgvVf5lZFIDDteVMtk"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": "localhost:3000/advertise/632b00460d2c5e5fc039479e"
+			},
+			"response": []
+		}
+	]
+}
