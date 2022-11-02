@@ -4,6 +4,17 @@ date: 2022-07-25
 ---
 
 
+#### 运行项目
+
+1. 安装Node.js 
+2. 安装postMan
+3. 安装 `MongoDB` 和可视化工具，README.md 笔记第二部分
+4. 克隆代码
+5. 将博客接口导入到 `postMan` 中
+6. node app.js
+7. 直接调用接口，数据库会自动创建
+
+
 ## 1. Node是什么
 
 **官方对Node.js的定义：Node.js是一个基于V8 JavaScript引擎的JavaScript运行时环境。**
@@ -1065,10 +1076,3 @@ app.listen(3000, () => {
 
 <img src="D:/日常/杂物阁/mlzz/mal/network/node/images/33.png" />
 
-
-
-#### 运行项目
-
-1. node app.js
-2. 将博客接口导入到 `postMan` 中
-3. 安装好 `MongoDB` 和可视化工具之后，可以直接调用接口，数据库会自动创建
